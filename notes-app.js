@@ -9,10 +9,13 @@ renderNotes(notes, filters);
 
 document.querySelector('#create-note').addEventListener('click', function(e){
   const newId = uuidv4();
+  const timestamp = moment().valueOf();
   notes.push({
     id: newId,
     title: '',
-    body: ''
+    body: '',
+    createdAt: timestamp,
+    updatedAt: timestamp
   })
   saveNotes(notes);
   location.assign(`/edit.html#${newId}`);
@@ -33,3 +36,7 @@ window.addEventListener('storage', function(e){
     renderNotes(notes, filters);
   }
 })
+
+// Add createdAt and updatedAt to the new notes (store timestamp)
+// Update the updatedAt when someone edits a title or body
+// Delete all old notes before testing
