@@ -1,3 +1,5 @@
+'use strict';
+
 let notes = getSavedNotes();
 
 //Create function to Filter data to be called whenever necessary
