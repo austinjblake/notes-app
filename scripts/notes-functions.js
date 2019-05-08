@@ -32,15 +32,6 @@ const generateNoteDOM = (note) => {
   //const button = document.createElement('button');
   const statusEl = document.createElement('p');
 
-  // Setup the remove note button
-  // button.textContent = 'x';
-  // noteEl.appendChild(button);
-  // button.addEventListener('click', (e) => {
-  //   removeNote(note.id);
-  //   saveNotes(notes);
-  //   renderNotes(notes, filters);
-  // })
-
   // Setup the note title text
   if (note.title.length > 0){
     textEl.textContent = note.title;
